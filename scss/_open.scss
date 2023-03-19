@@ -1,0 +1,96 @@
+.open {
+   margin-top: -199px;
+   height: 100vh;
+   width: auto;
+   position: relative;
+   & > img{
+      z-index: -1;
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+   }
+   &__body {
+      padding: 0 73px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+   }
+   &__description {
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      gap: 66px;
+   }
+   &__title {
+      font-size: 50px;
+      font-weight: 900;
+   }
+   &__span-title {
+      position: relative;
+      color: $mainColor;
+   }
+   &__span-title::after{
+     content:'';
+     position: absolute;
+     width: 110%;
+     height:100%;
+     left: -5%;
+     top:0;
+     border-radius: 50%;
+     background: rgba(13, 210, 46, 0.53);
+     filter: blur(75px);
+   } 
+   &__text {
+      color: rgba($color: $white, $alpha: 0.78);
+      font-size: 17px;
+      width: 40%;
+   }
+   &__buttons {
+      display: flex;
+      align-items: center;
+      gap: 56px;
+   }
+   &__btn-buy {
+      font-weight: 800;
+      font-size: 15px;
+      color: $white;
+      background: linear-gradient(84.4deg, #0DD22E 2.31%, #077719 97.73%);
+      box-shadow: 0px 4px 4px rgba(13, 210, 46, 0.5);
+      border-radius: 15px;
+      padding: 23px 45px;
+   }
+   &__price {
+      font-weight: 700;
+      font-size: 35px;
+   }
+   &__big-img {
+      position: relative;
+      width: 100%;
+      height:  50%;
+      //background: #000;
+   }
+   &__big-img img{
+      position: absolute;
+      top: 50px;left: 0;
+      min-width: 100%;
+      height: 100%;
+      //object-fit: cover;
+   }
+   &__big-img::after{
+      content:'';
+      z-index: -1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top:0;
+      border-radius: 50%;
+      background: rgba(13, 210, 46, 0.27);
+      filter: blur(150px);
+   }
+}
