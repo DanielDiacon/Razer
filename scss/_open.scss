@@ -2,23 +2,14 @@
    margin-top: -100px;
    height: 100vh;
    width: auto;
-   position: relative;
-   & > img{
-      z-index: -1;
-      content:'';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-   }
+   min-height:  800px;
    &__body {
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 50px 20px;
-      height: 100vh;
+      padding-top: 100px;
+      position: relative;
    }
    &__description {
       color: $white;
@@ -54,6 +45,7 @@
       display: flex;
       align-items: center;
       gap: 56px;
+      padding-bottom: 30px;
    }
    &__btn-buy {
       font-weight: 800;
@@ -77,7 +69,6 @@
       position: relative;
       width: 100%;
       height:  50%;
-      //background: #000;
       aspect-ratio: 639 / 510;
    }
    &__big-img img{
@@ -97,5 +88,78 @@
       border-radius: 50%;
       background: rgba(13, 210, 46, 0.27);
       filter: blur(150px);
+   }
+   &__videos {
+      display: flex;
+      gap: 60px;
+   }
+   &__video {
+      position: relative;
+      border-radius: 15px;
+      transition: .2s;
+   }
+   &__video:hover{
+      box-shadow: 0px 4px 4px rgba(13, 210, 46, 0.2);
+      transform: translateY(-4px);
+   }
+   &__icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% , -50%);
+      height: 41px;
+      width: 41px;
+      transition: .2s;
+   }
+}
+
+
+@media only screen and (max-width:$mobile) {
+   .open {
+      &__body {
+         padding-top: 100px;
+         display: flex;
+         flex-direction: column;
+         align-items: start;
+         justify-content: start;
+         position: relative;
+      }
+      &__description {
+         gap: 30px;
+      }
+      &__title {
+         font-size: 25px;
+      }
+      &__big-img {
+         position: relative;
+         width: 80%;
+         margin: 0 auto;
+         height: auto;
+         aspect-ratio: 639 / 510;
+      }
+      &__big-img img{
+         position: relative;
+         width: 100%;
+      }
+      &__videos {
+         display: none;
+      }
+      &__buttons {
+         gap: 20px;
+      }
+      &__btn-buy {
+         font-weight: 800;
+         font-size: 15px;
+         color: $white;
+         background: linear-gradient(84.4deg, #0DD22E 2.31%, #077719 97.73%);
+         box-shadow: 0px 4px 4px rgba(13, 210, 46, 0.2);
+         border-radius: 12px;
+         padding: 10px 20px;
+         transition: .2s;
+      }
+      &__price {
+         font-weight: 700;
+         font-size: 20px;
+      }
    }
 }

@@ -1,6 +1,6 @@
 .header {
    height: 100px;
-   //background: #ffffffd3;
+   padding: 10px;
    z-index: 100;
    &__body {
       display: flex;
@@ -8,9 +8,9 @@
       align-items: center;
    }
    &__img {
+      z-index: 2;
       min-width: 80px;
       min-height: 80px;
-      margin: 10px;
       position: relative;
    }
    &__img img{
@@ -67,9 +67,7 @@
    }
 }
 .menu {
-   &__burger {
-      display: none;
-   }
+
    &__list {
       display: flex;
       gap: 25px;
@@ -86,75 +84,51 @@
       background: rgba($color: $mainColor, $alpha: 0.2);
       border-radius: 10px;
    }
+   &__burger {
+      display: none;
+   }
 }
 
 
 // adapted burger <====================================================================================================================================================================================================================================>
-//@media (max-width:767px) {
-//body.lock
-//{
-//   overflow: hidden;
-//}
-//.menu{
-//   &__burger
-//   {
-//      display: block;
-//      position: relative;
-//      top: 0;
-//      right:  0;
-//      height: 50px;
-//      width: 50px;
-//      margin:10px;
-//      overflow:hidden ;
-//      z-index:2;
-//   }
-   //&__burger::after,
-   //&__burger::before,
-   //&__line
-   //{
-   //   content: '';
-   //   position: absolute;
-   //   top: 5px;
-   //   left: 5px;
-   //   width: 40px;
-   //   height: 10px;
-   //   border-radius: 10px;
-   //   background:  $maineColor;
-   //   transition: .3s;
-   //}
-   //&__burger::after{
-   //   top: 5px;
-   //}
-   //&__burger.active::after{
-   //   transform: translateY(15px) rotate(45deg);
-   //}
-   //&__burger::before{
-   //   top: 35px;
-   //}
-   //&__burger.active::before{
-   //   transform: translateY(-15px) rotate(-45deg);
-   //}
-   //&__line{
-   //   top: 20px;
-   //}
-   //&__burger.active &__line{
-   //   transform: translateY(0px) rotate(45deg);
-   //}
-//   &__body
-//   {
-//      overflow: auto;
-//      position: fixed;
-//      right: 0;
-//      top: -100%;
-//      width:100%;
-//      height:100%;
-//      padding: 80px 0 0 0 ;
-//      background: var(--black);
-//      transition: .3s;
-//   }
-//   &__body.active
-//   {
-//      top: 0;
-//   }
-//}
-//}
+@media (max-width:767px) {
+body.lock
+{
+   overflow: hidden;
+}
+.menu{
+   &__burger{
+      display: block;
+      position: relative;
+      top: 0;
+      right:  0;
+      height: 50px;
+      width: 50px;
+      margin:10px;
+      overflow:hidden ;
+      z-index:2;
+   }
+   &__body{
+      overflow: auto;
+      position: fixed;
+      right: 0;
+      top: -100%;
+      width:100%;
+      height:100%;
+      padding: 80px 0 0 0 ;
+      background: rgba($color: $black, $alpha: 0.5);
+      backdrop-filter: blur(3px);
+      transition: .3s;
+   }
+   &__body.active{
+      top: 0;
+   }
+   &__list {
+      flex-direction: column;
+      align-items: center;
+   }
+   &__link {
+      
+   }
+}
+}
