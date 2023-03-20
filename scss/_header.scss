@@ -1,16 +1,16 @@
 .header {
-   padding: 36px 0;
-   height: 199px;
-   //background: #d7d7d74b;
+   height: 100px;
+   //background: #ffffffd3;
+   z-index: 100;
    &__body {
-      padding: 0 58px;
       display: flex;
       justify-content: space-between;
       align-items: center;
    }
    &__img {
-      min-width: 127px;
-      min-height: 127px;
+      min-width: 80px;
+      min-height: 80px;
+      margin: 10px;
       position: relative;
    }
    &__img img{
@@ -20,13 +20,31 @@
       width:100%;
       height: 100%;
    }
-   &__menu {
-   }
    &__buttons {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 44px;
+      gap: 24px;
+   }
+   &__icon{
+      position: relative;
+      width: 50px;
+      height: 50px;
+      transition: .2s;
+      border-radius: 5px;
+   }
+   &__icon:hover{
+      background: rgba($color: $mainColor, $alpha: 0.2);
+      border-radius: 10px;
+   }
+   &__icon img{
+      padding: 10px;
+      position: absolute;
+      width:100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: contain;
    }
    &__icon.shop {
       position: relative;
@@ -52,17 +70,21 @@
    &__burger {
       display: none;
    }
-   &__body {
-   }
    &__list {
       display: flex;
-      gap: 60px;
-   }
-   &__item {
+      gap: 25px;
    }
    &__link {
       color: $white;
       font-weight: bold;
+      font-size: 14px;
+      padding: 10px;
+      transition: .2s;
+      border-radius: 5px;
+   }
+   &__link:hover{
+      background: rgba($color: $mainColor, $alpha: 0.2);
+      border-radius: 10px;
    }
 }
 
