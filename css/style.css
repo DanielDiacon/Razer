@@ -695,19 +695,18 @@ main {
     align-items: center;
   }
   .login__logo img {
-    width: 100%;
+    width: 90%;
     height: auto;
     -o-object-fit: contain;
        object-fit: contain;
-    opacity: 0.5;
+    opacity: 0.3;
   }
   .login__form {
     width: 100%;
   }
   .form {
     color: #F5F5F5;
-    padding: 50px;
-    padding-left: 50px;
+    padding: 50px 20px;
   }
 }
 .grid__body {
@@ -785,6 +784,12 @@ main {
 .mail__form {
   display: flex;
   gap: 35px;
+}
+@media only screen and (max-width: 767.98px) {
+  .mail__form {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 .mail__email {
   width: 100%;
